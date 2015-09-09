@@ -4,7 +4,7 @@ This is *not* a traditional router. This is a packet forwarder with
 a simple binary protocol to send and receive packets between
 connected devices using the ESP8266 as intermediary.
 
-It can handle up to 253 connected devices, although the limit is
+It can handle up to 254 connected devices, although the limit is
 currently set to only 5 in the code ahead. You can change that limit
 easily just by setting the amount on the MAX_SLOTS define.
 
@@ -32,12 +32,11 @@ the following format:
 [SRC][TGT][PKT]
 
 [SRC]: 1 byte - tells which device is contacting the Forwarder.
-This index is pre-defined for each device on the network.
 [TGT]: 1 byte - target device to receive the packet.
 [PKT]: variable width - the packet itself.
 
 The Forwarder will then send the very same packet (including the two
-header bytes) to the target device indentified by that TGT index.
+header bytes) to the target device identified by that TGT index.
 
 There is also a simple LED feedback to know when it's in AP (slow blinking)
 and Station mode (faster blinking). When it receives packets, the LED also
