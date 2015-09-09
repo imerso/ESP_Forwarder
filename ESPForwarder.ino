@@ -7,7 +7,7 @@
 //
 // It can handle up to 253 connected devices, although the limit is
 // currently set to only 5 in the code ahead. You can change that limit
-// easily just by setting the amount on the MAX_SLOTS define ahead.
+// easily just by setting the amount on the MAX_SLOTS define.
 //
 // The protocol is as follows:
 //
@@ -40,6 +40,12 @@
 // The Forwarder will then send the very same packet (including the two
 // header bytes) to the target device indentified by that TGT index.
 //
+// There is also a simple LED feedback to know when it's in AP (slow blinking)
+// and Station mode (faster blinking). When it receives packets, the LED also
+// is kept on for a few seconds.
+//
+// On my own tests, I'm getting about 10mbps throughput with this forwarder.
+//
 // Written by Vander 'imerso' Nunes | imersiva.com
 // ======================================= ======= === == == =  =  = -- - -
 
@@ -54,10 +60,6 @@
 
 #define LED_PIN 2
 #define BUFFERSIZE 10240
-
-// packet types
-#define PKT_CHANNELS 0x01
-#define PKT_HEADTRACK 0x02
 
 bool isLEDOn = false;
 long lastBlink = 0;
