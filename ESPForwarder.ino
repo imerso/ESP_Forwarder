@@ -2,8 +2,12 @@
 // Minimalistic Wifi Packet Forwarder using ESP8266 Wifi Transceiver v1.0
 //
 // This is *not* a traditional router. This is a packet forwarder with
-// a simple binary protocol to send and receive packets between two
+// a simple binary protocol to send and receive packets between
 // connected devices using the ESP8266 as intermediary.
+//
+// It can handle up to 253 connected devices, although the limit is
+// currently set to only 5 in the code ahead. You can change that limit
+// easily just by setting the amount on the MAX_SLOTS define ahead.
 //
 // The protocol is as follows:
 //
