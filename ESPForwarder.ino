@@ -5,7 +5,7 @@
 // a simple binary protocol to send and receive packets between
 // connected devices using the ESP8266 as intermediary.
 //
-// It can handle up to 253 connected devices, although the limit is
+// It can handle up to 254 connected devices, although the limit is
 // currently set to only 5 in the code ahead. You can change that limit
 // easily just by setting the amount on the MAX_SLOTS define.
 //
