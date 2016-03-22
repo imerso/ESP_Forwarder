@@ -44,4 +44,3 @@ is kept on for a few seconds.
 
 On my own tests, I'm getting about 10mbps throughput with this forwarder.
 
-Written by Vander 'imerso' Nunes | imersiva.com
