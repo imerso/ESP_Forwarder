@@ -44,3 +44,10 @@ is kept on for a few seconds.
 
 On my own tests, I'm getting about 10mbps throughput with this forwarder.
 
+Requires the ESP_WebConfig library installed
+in the Arduino libraries folder.
+
+Please find ESP_WebConfig at github: https://github.com/imerso
+
+Written by Vander Roberto Nunes Dias - a.k.a. 'imerso' / imersiva.com
+
